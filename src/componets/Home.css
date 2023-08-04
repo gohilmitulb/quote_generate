@@ -105,7 +105,7 @@ body{
 .footer_container{
     width: 100vw;
     position: absolute;
-    bottom: 0.3rem; 
+    bottom: 0.4rem; 
 }
 
 .footer_container p{
@@ -149,7 +149,7 @@ body{
 
 @media(max-width: 600px){
     .container{
-        height: 100vh;
+        height: 95vh;
     }
 
     .content{
@@ -170,6 +170,10 @@ body{
 
     .generate_btn_div button{
         font-size: 1.1rem;
+    }
+
+    .footer_container{
+        bottom: 1.1rem; 
     }
 
     .footer_container p{

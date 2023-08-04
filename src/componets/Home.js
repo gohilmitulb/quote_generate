@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './Home.css'
+import Loader from './Loader'
 
 export default function Home() {
     const [quote, setQuote] = useState('With great power comes great responsibility.')
     const [author, setAuthor] = useState('Uncle Ben')
     const [category, setCategory] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const handleOnChange = (e) => {
         setCategory(e.target.value)
@@ -17,19 +19,28 @@ export default function Home() {
     }, [category])
 
     const quoteRequest = async () => {
-        const api = `https://api.api-ninjas.com/v1/quotes?category=${category}`
-
-        const response = await fetch(api, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Api-Key': process.env.REACT_APP_API_KEY
-            }
-        })
-
-        const data = await response.json()
-        setQuote(data[0].quote);
-        setAuthor(data[0].author);
+        setLoading(true)
+        setQuote('')
+        setAuthor('')
+        try{
+            const api = `https://api.api-ninjas.com/v1/quotes?category=${category}`
+    
+            const response = await fetch(api, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Api-Key': process.env.REACT_APP_API_KEY
+                }
+            })
+    
+            const data = await response.json()
+            setQuote(data[0].quote);
+            setAuthor(data[0].author);
+        }catch(error){
+            console.log(error);
+        } finally{
+            setLoading(false)
+        }
     }
     return (
         <>
@@ -46,6 +57,7 @@ export default function Home() {
 
                         <div className="quote_div">
                             <p>{quote}</p>
+                            {loading && (<Loader/>)}
                         </div>
 
                         <div className="bottom_dquotes">
