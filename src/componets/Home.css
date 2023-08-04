@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body{
+    background-color: #353535;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    background-color: rgb(245, 214, 250);
+    height: 40rem;
+    width: 70rem;
+    border-radius: 0.7rem;
+}
+
+.title_div h1{
+    text-align: center;
+    color: #353535;
+    margin-top: 1rem;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.bottom_dquotes{
+    position: absolute;
+    right: 0;
+}
+
+.bottom_dquotes i{
+    transform: rotate(180deg);
+}
+
+.quote_div{
+    padding: 2rem;
+    width: 60rem;
+}
+
+.quote_div p{
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.quote_author_div p{
+    font-size: 1.4rem;
+}
+
+.generate_btn_div{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.select_category{
+    border: none;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #353535;
+    color: whitesmoke;
+    border-radius: 0.3rem;
+}
+
+.select_category option{
+    background-color: rgb(218, 183, 223);
+    color: #353535;
+}
+
+.generate_btn_div button{
+    padding: 0.2rem 0.8rem;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #353535;
+    color: whitesmoke;
+    border-radius: 0.3rem;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.generate_btn_div button:hover{
+    background-color: rgb(218, 183, 223);
+    color: #353535;
+}
+
+.footer_container{
+    width: 100vw;
+    position: absolute;
+    bottom: 0.3rem; 
+}
+
+.footer_container p{
+    color: rgb(245, 214, 250);
+    text-align: center;
+}
+
+@media(max-width: 1200px) {
+    .container{
+        height: 30rem;
+        width: 50rem;
+    }
+
+    .content{
+        gap: 2rem;
+    }
+
+    .quote_div p{
+        font-size: 1.2rem;
+    }
+
+    .quote_author_div p{
+        font-size: 1rem;
+    }
+
+    .quote_div{
+        width: 45rem;
+    }
+}
+
+@media(max-width: 800px){
+    .container{
+        width: 100vw;
+    }
+
+    .quote_div{
+        padding: 0;
+        width: 95vw;
+    }
+}
+
+@media(max-width: 600px){
+    .container{
+        height: 100vh;
+    }
+
+    .content{
+        gap: 7rem;
+    }
+
+    .title_div h1{
+        font-size: 1.3rem;
+    }
+
+    .generate_btn_div{
+        bottom: 3rem;
+    }
+
+    .select_category{
+        font-size: 1.1rem;
+    }
+
+    .generate_btn_div button{
+        font-size: 1.1rem;
+    }
+
+    .footer_container p{
+        color: #353535;
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 400px){
+    .quote_div p{
+        font-size: 1rem;
+    }
+
+    .quote_author_div p{
+        font-size: 0.8rem;
+    }
+
+    .generate_btn_div{
+        gap: 1rem;
+    }
+}
