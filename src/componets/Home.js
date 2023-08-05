@@ -29,7 +29,7 @@ export default function Home() {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-Api-Key': process.env.REACT_APP_API_KEY
+                    'X-Api-Key': 'your api key here'
                 }
             })
     
