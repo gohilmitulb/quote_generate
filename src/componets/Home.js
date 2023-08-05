@@ -108,27 +108,18 @@ export default function Home() {
                         <option value="intelligence">Intelligence</option>
                         <option value="funny">Funny</option>
                         <option value="government">Government</option>
-                        <option value="technology">Technology</option>
                         <option value="food">Food</option>
                         <option value="movies">Movies</option>
                         <option value="computers">Computers</option>
-                        <option value="sports">Sports</option>
-                        <option value="music">Music</option>
-                        <option value="travel">Travel</option>
                         <option value="beauty">Beauty</option>
                         <option value="art">Art</option>
-                        <option value="justice">Justice</option>
-                        <option value="career">Career</option>
-                        <option value="science">Science</option>
-                        <option value="exploration">Exploration</option>
-                        <option value="humanity">Humanity</option>
                     </select>
                     <button onClick={quoteRequest}>Generate Quote</button>
                 </div>
 
             </div>
                 <div className="footer_container">
-                    <p>Quote Generator by Mitul Gohil 🚀</p>
+                    <p>Quote Generator by <a href='https://mitulgohil.me' target='Mitul Gohil'>@Mitul Gohil 🚀</a></p>
                 </div>
         </>
     )
