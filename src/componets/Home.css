@@ -186,6 +186,10 @@ body{
         color: #353535;
         font-size: 0.8rem;
     }
+
+    .footer_container a{
+        color: #353535;
+    }
 }
 
 @media(max-width: 400px){
